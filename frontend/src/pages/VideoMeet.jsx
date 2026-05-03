@@ -15,6 +15,7 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import ChatIcon from '@mui/icons-material/Chat';
 import SendIcon from '@mui/icons-material/Send';
 import { redirect, useNavigate } from 'react-router-dom';
+import server from '../environment';
 
 import "../styles/videoComponent.css";
 import Badge from '@mui/material/Badge';
