@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import dns from 'dns';
 import {connectToSocket} from "./controllers/socketManager.js";
 // Force Node to use Google DNS
@@ -22,7 +25,7 @@ app.use(express.urlencoded({limit: '40kb', extended: true}));
 app.use("/api/v1/users",userRoutes);
 
 const start = async()=>{
-    const connnectionDb = await mongoose.connect("mongodb+srv://bhabasindhudas621_db_user:ZU1cDYft3b72lk5p@videocall.rjipezs.mongodb.net/?appName=VideoCall")
+    const connnectionDb = await mongoose.connect(process.env.ATLASDB_URL)
     console.log(`mongoDB connected to host port : ${connnectionDb.connection.host}`);
     
     server.listen(app.get("port"),()=>{
