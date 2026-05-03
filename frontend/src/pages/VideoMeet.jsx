@@ -18,7 +18,7 @@ import { redirect, useNavigate } from 'react-router-dom';
 
 import "../styles/videoComponent.css";
 import Badge from '@mui/material/Badge';
-const serverURL = "http://localhost:5000"
+const serverURL = server;
 const connections = {}
 
 const peerConfigConnections = {
